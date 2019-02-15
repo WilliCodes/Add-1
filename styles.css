@@ -1,0 +1,87 @@
+html {
+    background-color: #2c2f33;
+}
+
+#train-btn {
+    background-color: #585c63;
+    border: none;
+    color: black;
+    padding: 1.2em 0.5em 1.2em 1.5em;
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 1em;
+    font-family: "Lucida Console", monospace;
+}
+
+#train-btn:hover {
+    color: white;
+}
+
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#number {
+    font-size: 6em;
+    color: #dadee5;
+    cursor: default;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+}
+
+#countdown {
+    position: relative;
+    margin: 2em auto;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+    animation: countdown 1s linear infinite forwards;
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 113px;
+    }
+}
+
+#input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #dadee5;
+    color: #dadee5;
+    font-size: 4em;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+    width: 3em;
+}
+
+#input:focus {
+    outline: none;
+}
