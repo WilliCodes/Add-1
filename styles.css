@@ -19,6 +19,24 @@ html {
     color: white;
 }
 
+.change-incr-btn {
+    background-color: #585c63;
+    border: none;
+    color: black;
+    padding: 0.7em 0.5em 0.7em 0.7em;
+    text-align: center;
+    font-size: 0.8em;
+    cursor: pointer;
+    letter-spacing: 0.2em;
+    font-family: "Lucida Console", monospace;
+    margin: 0.5em;
+}
+
+.footer {
+    margin: auto;
+    text-align: center;
+}
+
 
 .center {
     margin: 0;

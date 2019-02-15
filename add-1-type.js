@@ -1,3 +1,5 @@
+var incr = 1;
+
 window.onload = function () {
     var toGuess = [];
 
@@ -34,10 +36,15 @@ window.onload = function () {
             return false;
         }
         for (var i = 0; i < 4; i++) {
-            if (((rand[i] + 1) % 10).toString() !== inp[i]) {
+            if (((rand[i] + incr) % 10).toString() !== inp[i]) {
                 return false;
             }
         }
         return true;
     };
+
+};
+
+var changeIncr = function (newIncr) {
+    incr = newIncr;
 };

@@ -1,3 +1,5 @@
+var incr = 0;
+
 window.onload = function () {
     var toGuess = [];
 
@@ -25,7 +27,7 @@ window.onload = function () {
             inputCounter++;
             var correct = '';
             for (var i = 0; i < toGuess.length; i++)
-                correct += ((toGuess[i] + 1) % 10).toString();
+                correct += ((toGuess[i] + incr) % 10).toString();
             number.innerHTML = correct;
         } else {
         inputCounter = 0;
@@ -34,4 +36,8 @@ window.onload = function () {
     }
     }, 1000);
 
+};
+
+var changeIncr = function (newIncr) {
+    incr = newIncr;
 };
