@@ -25,6 +25,7 @@ window.onload = function () {
             result ? number.innerHTML = ':-)' : number.innerHTML = ':\\';
             inputCounter = 0;
             toGuess = [];
+            input.value = ''
         }
     }, 1000);
 
