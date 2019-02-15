@@ -14,19 +14,29 @@ window.onload = function () {
             toGuess.push(newNum);
         } else if (inputCounter === 0){
             inputCounter++;
+            number.innerHTML = '#';
         } else if (inputCounter < 4) {
             // check each input
             inputCounter++;
         } else {
-            console.log(toGuess.toString());
-            console.log(input.value);
+            number.innerHTML = '-';
             // check if all correct
+            var result = errorChecking(toGuess, input.value);
+            result ? number.innerHTML = ':-)' : number.innerHTML = ':\\';
             inputCounter = 0;
             toGuess = [];
         }
     }, 1000);
 
     var errorChecking = function (rand, inp) {
-
+        if (inp.length !== 4) {
+            return false;
+        }
+        for (var i = 0; i < 4; i++) {
+            if (((rand[i] + 1) % 10).toString() !== inp[i]) {
+                return false;
+            }
+        }
+        return true;
     };
 };
