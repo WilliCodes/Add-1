@@ -25,4 +25,8 @@ window.onload = function () {
             toGuess = [];
         }
     }, 1000);
+
+    var errorChecking = function (rand, inp) {
+
+    };
 };
